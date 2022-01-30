@@ -36,3 +36,8 @@ jobs:
         run: |
           echo 'testing the task formats '
           python src/test_all.py 
+
+      - name: update readme. 
+        run: |
+          echo 'updating the readmefile'
+          python src/auto_update_readme.py 
