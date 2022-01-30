@@ -1,0 +1,3639 @@
+{
+    "Contributors": [
+        "Xudong Shen"
+    ],
+    "Source": [
+        "HateEval (dataset: https://github.com/cicl2018/HateEvalTeam)"
+    ],
+    "Categories": [
+        "Classification",
+        "Sentiment Analysis -> Sentiment Classification"
+    ],
+    "Definition": "In this task, you are given a hateful post in Spanish from online platforms. You are expected to classify the post into two classes: aggresive or non-aggresive. An aggresive post is one that expresses feelings and opinions in an abusive way and tries to dominate others.",
+    "Positive Examples": [
+        {
+            "input": "Post: @_Sofiasosa_ Callate si ni me mandas zorra",
+            "output": "Aggresive",
+            "explanation": "This post is aggresive because it speaks as if he / she is commanding, and uses explicit language \"zorra\". The English translation is \"@_Sofiasosa_ Shut up if you don't even send me a bitch.\"."
+        },
+        {
+            "input": "Post: @emjuarez7 Tú eres mi favorita perra 😪",
+            "output": "Non-aggresive",
+            "explanation": "This is non-aggresive. Although it uses the explicit language \"perra\", it is for the purpose of emphasizing his or her love for the person he or she is speaking to. The English translation is \"@emjuarez7 Tú you are my favorite bitch!\"."
+        }
+    ],
+    "Negative Examples": [
+        {
+            "input": "Post: @_Gxbxh @Dianbanana_ perra estupida ahora tu eres la gorda",
+            "output": "Yes",
+            "explanation": "You are expected to return \"Aggresive\" or \"Non-Aggresive\". This post should be aggresive because it calls people \"perra estupida\". The English translation is \"@_Gxbxh @Dianbanana_ stupid bitch now you are the fat one.\"."
+        },
+        {
+            "input": "Post: ¿cual es el dia de la mujer? -El dia menos pensado-",
+            "output": "No",
+            "explanation": "You are expected to return \"Aggresive\" or \"Non-Aggresive\". This post should be non-aggresive, although it expresses slight disrespect to woman. The English translation is \"What is Women's Day? -The day you least expect it.\"."
+        }
+    ],
+    "Instances": [
+        {
+            "input": "Post: @robertfelixrodz @agria_ @Mellowshyt Psss hoy vamos y como tu eres una puta te voy a regalar un trago",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Les destrozas la vida a siete menores y te premian con solo 7 meses de cárcel. ¿ ¿Cuál es el secreto de tanta magnanimidad con un violador compulsivo? No hay secreto, es un 'pobrecito inmigrante'. Angela Merkel, se puede decir que es una cooperadora necesaria en esas violaciones. https://t.co/VFB5aD82ww",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Y muchas de esas Miles de violaciones son de parte de tus queridos refugiados. Por cierto estafador ponte a trabajar como las personas https://t.co/bgiV5GdMv5",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @LailaGermanotta Se merecía 3 oscars solo por esa escena. La hada madrina es ESA ZORRA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: me encanta lo guarra que eres, te follaria hasta provocarte un nuevo desgarro vaginal — si provocas un desgarro vaginal follando follas bastante mal https://t.co/j8U6umdicd",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: CÁLLATE PUTA ZORRA BORRACHA DROGADICTA https://t.co/60lgyRsEfk",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @AgusManzanares En tu cara zorra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pon pon, quien es? El Futbolista Abre la muralla Pon pon, quien es? El moro mierda Cierra la muralla  Pon pon, quien es? El árabe con dólar  Abre la muralla Pon pon, quien es? El negro en patera Cierra la muralla Pon pon, quien es?",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Siguen siendo mercancía y de la barata ,como los árabes vendedores de coroto. https://t.co/TuSjlgzIUA",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Todo aquel que quiere ver en esta invasion por el sur un problema migratorio se equivoca. En los que han asaltado la valla de Ceuta solo veo hombres muy jóvenes, fuertes, valientes y desvergonzados dispuestos a poner a España contra las cuerdas. https://t.co/CmSEqd1K25",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: #españaesuna #stopUE #stopLGTB Los inmigrantes en hostales, a pensión completa, y los españoles durmiendo en el coche https://t.co/rMtZA7ods9",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @INM @tatclouthier #TODOCOYOCAN @amandititita @JesusMartinMx @TlalpanCoyoacan @MovimientoAMLO @flacuchiruda  cuidado lacras Sudacas en MEXICO !!el plan de EU https://t.co/cWBC33fFaW",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: A pedirle papeles a todas las personas en la calle y pedir visa a todos el que quiera venir y deportar ilegales  si no tenemos control en los aeropuertos y puertos y frontera estamos jodidos invasión silenciosa vivir con tu enemigo sin contar con los apátridas estamos en guerra https://t.co/CqPwORL9c0",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Dos amigos hablando: -Raúl, q me das por mi mujer? -Nada -Trato hecho.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: La zorra de @laufer4 riéndose en la cara de mica mientras lloraba hay la tienen ala careta esa",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Esto es lo que la ONU/UNION EUROPEA/VATICANO/COMUNISTAS/SOCIALISTAS/PROGRES/NWO llevan de Africa a Europa...👇👇👇 Un inmigrante nigeriano mata y descuartiza a una joven italiana de 18 años. https://t.co/EaxYjwSsLt",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Ola de calor subsahariano, la semana pasada 600 marroquíes cruzan la valla de Ceuta violentamente, joder con Marruecos, que se queden con sus mierdas, aquí no las queremos.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: REFUGIADOS SI, INMIGRANTES LOS NECESARIOS Y LOS QUE REALMENTE PODAMOS ATENDER, pienso que España sólo debería acoger y de una forma ordenada a inmigrantes latinoamericanos de habla española, cristianos, que... https://t.co/mo1PM2oR2l",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @PakoAyestaran LÁRGATE GACHUPIN DE MIERDA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @victorACDZ @yael_diaz Tu cállate alv perra envidiosa 🌚",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: VOY A PUBLICAR TU FOTO EN LA PRENSA PA QUE LA GENTE LO SEPA QUE TU ERES TREMENDA PERRA HIJUEPUTAAAAAAAA.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @TiaFeminazi Movimiento SEMEN! A fregar todas! http://t.co/u9WvI5Fr18",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Que guarra tienes que ser en el catre — Cuando quiero con quien quiero https://t.co/nBUSE7ejJb",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @NitoSetroc @absurddheces Es perra. Tú eres homoanimal y ella lesbiana. No eres su tipo ni ella el tuyo...",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Después del asalto frustrado en Plaza Norte, creo que el gobierno debe expulsar inmediatamente a los Venezolanos indocumentados, a los que manejan sin brevete y a los que venden el alfajor a 1.50 en los semáforos.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: La gente inmigrante que ha entrado en España de modo legal y se integran en nuestra sociedad se les llama personas de color.  Los ilegales que entran por la valla atacando a nuestros agentes, delinquiendo y agrediendo a nuestros ciudadanos son NEGROS  e islamistas sin adornos!!!",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @CineJavi Toda la puta vida las tetas fueron y serán tendencia, y si buscan excusa para enseñarlas, mejor, que coño tanta tonteria.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Interesante el video. El agresor parecer ser uno de esos tantos refugiados que los progres gustan abrir las puertas. Estaria bueno saber que se dijeron AMBOS.   Y por último el franchute que se paró y agarro la silla es la fiel representación del occidental cagon promedio. https://t.co/uzMv1E2PPe",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: la novia es mas puta y el pelotudo sigue estando con ella , ni pa bosta la mina mas zorra y el ni hablar mas gil todavía , le re kbio",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @amparolasheras @gabrielrufian Amparo un porro Amparo po zi😂😂😂era bastante mejor persona q tú pq tú eres una perra sarnosa ponte el chip por si te escapas https://t.co/aoxLoYaW95",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: LA BARCELONA DE LA COLAU, ESTAN HACIENDO DE ESTA CIUDAD UNA ZONA INVIVIBLE, ENTRE MOROS, Y DELINCUENTES....Y SIGUE DEFENDIENDO LA INMIGRACIÓN INCOTROLADA  https://t.co/Eap7PKRMA3 https://t.co/Eap7PKRMA3",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Retratao el roomba sudaca. https://t.co/4KA6aCyNDb",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Romang0920 Y tu eres una puta",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pregunta: en cuánto incide el desempleo en sectores más básicos de la economía por la presencia de inmigrantes? Si no puedo hacer esa pregunta, estamos jodidos.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Llegó el loquito más picante del condado, muy enojado, ta re apiolado. El que se coje a todo el patio de parado, y saca el choto todo cagado, acá en el barrio no queremos refugiados, sub 21 soy tu soldado",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: #OmarPrieto, gobernador del Zulia, anunció que extranjeros indocumentados serán deportados. #extranjeros en #venezuela? El unico #extranjero que toda #venezuela queremos #deporten se llama @NicolasMaduro #MaduroGenocida #MaduroAcabóConVzla #maduroesmuerte",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: -¿Aquí es la oficina de atención contra el racismo? -Claro que sí, pásele pinche indio prieto sarrapastrozo ahorita lo atendemos, primero que pase el güero.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Alarma por los más de 50.000 subsaharianos que esperan en Marruecos para cruzar a España .  @PPopular @ahorapodemos  Esta es vuestra poitica, matar al pueblo de hambre y a éstos les pondréis la alfombra para que entren, sois basura. https://t.co/HG3OZVcTF1 vía @elmundoes",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: La inmigración también es un determinante de salud  El Real Decreto de 2012 esgrimía justificaciones como el turismo sexual: los inmigrantes no vienen por turismo sexual, de hecho, los que vienen son los más sanos, fuertes, jóvenes,... https://t.co/TgPG6FI6pS",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: -¿cual es el vehículo de una mujer? -la aspiradora.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: putos moros tan en to",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @NThundurus No tienes globitos en tu perfil, que te follen zorra no mereces vivir,",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @medelcami01 Tu eres mi perra cierto",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @NathalyMendieta Imbecil te lo merecías. Agradéceme perra https://t.co/Dn3lcV4A4z",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Easyjet quiere duplicar el número de mujeres piloto' Verás tú para aparcar el avión.. http://t.co/46NuLkm09x",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Para vos gallina puta callate es idolo de todos Dieguito https://t.co/6vW74CJhzJ",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pablo Casado acusa a los inmigrantes de las altas temperaturas porque \"el negro atrae el calor\" https://t.co/IeP9iB0gt7",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Despertó la alcaldesa de la ciudad en la que un inmigrante con papeles casi fue muerto por inmigrantes sin papeles, al defender a una mujer hostigada por éstos.  ¿No tendrá nada que decir? ¿Le parecerá bien que los manteros hostiguen a señoras y peguen a turistas? @pedroj_ramirez https://t.co/l4VPcEBmeD",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Por primera vez ENTIENDO el ODIO de Trump a los Mexicanos. 😥 Ayer o antier, 7 mexicanos intentaron robar dentro de un centro comercial, una joyería. Los atraparon.....  Los 7 son : Mexicanos, indocumentados y RATEROS ... 😡😡😡😡 Pagamos “justos por pecadores” Me siento ENOJADA",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Están ya detenidos estos salvajes indocumentados? https://t.co/TrOpaUgiR4",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Lo primero que hace Sanchez dar mas cobertura y mas medidas a la inmigración ilegal, enseñanza en árabe bajada del tiempopara nacionalizarse mirar a otro lado con los cada dia mas agresivos manteros etc.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Que hace una mujer fuera de la cama? Turismo Y fuera de la casa? Turismo internacional Y en el supermercado? Turismo comercial",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Hxrry_again CÁLLATE PERRA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Haced una encuesta, a ver qué pensamos los españoles de los inmigrantes? Seguro que el resultado no os gusta.Estamos saturados, hay calles dónde ya te sientes tú  el extranjero. Esto se ha ido de las manos, y con las ayudas que reciben más van a venir. #PdV06A",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Mi amor, ¿crees en el amor a primera vista? - ¡Claro! Si te hubiera mirado dos veces no me habría casado. #Humor",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @magihenriquez_ pero voy como a las 12:30 por ahi, puta zorra no te mereces que te lleve pizzas",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @daniellemx_ Te mereces mas la portadabde la revista playboy.. Por zorra.. Y mentirosa..",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @SoyPutoImbecil @AngiieNinja HAHAHAHAHAHAHAA, con olerlo se pone to siega la tia sabes, los viernes que me da no son normales la zorra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Porque las mujeres ven las peliculas porno enteras? -Porque se creen que al final se van a casar o algo.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Lo bien que van esos tunantes ahí, una pela encueros es qué hay que darles a estos traficantes de indocumentados, llenando el pais de esta plaga que entran sin documentación, sin historial y sin nada a nuestro país, quien sabe dejando que prontuario en su país... https://t.co/8pYd1aq5Ml",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: ATENCIÓN!!!! LA INTELIGENCIA NORTEAMERICANA ADVIERTE DE UNA INVASIÓN INMINENTE DE 100.000 SUBSAHARIANOS. #DefiendeEspaña ELECCIONES YA!!! #españa #EleccionesGeneralesYA https://t.co/M1aGsV4QZn",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @mspn95 @SC_ESPN Callate gallina puta y cntala cmo quieras!! Bolso culo facil!! Jajajaaj hijooo",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Los inmigrantes muestran su cara más violenta con peleas en plena calle — El Pueblo de Ceuta https://t.co/Xd26df3yhL",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Una vela por estas feminiprogres y progres gilipollas que están a favor de llenar España de subsaharianos musulmanes cuya religión obliga a tapar a sus mujeres; va a ser gracioso ver en unos años como las cazan por las calles por enseñar carne ejerciendo su libertades como mujer",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @vanesatrz94 Las mujeres son pendejas aquí y en Francia. Una cosa es el ligue y otra el acoso sexual salu2",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: -¿Porque la esatua de la libertad es mujer? -Porque se nescesitaba una cabeza hueca para hacer un mirador",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Apuesto que eres tan zorra que si alguien se acuesta contigo adquiere una ETS — Yo soy casi virgen asi que cállate https://t.co/XGUf0fGfQc",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pobrecillos. Es que dan lastima. Aunque no entiendo por que ninguno de los asaltantes de la valla de Ceuta tenía aspecto de estar desnutrido o de haber pasado calamidades. Más bien, parecían recién salidos de un gimnasio. https://t.co/8iJnORictx",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Las cámaras de seguridad del metro de Milán han grabado cómo una joven de 25 años logra defenderse de un nigeriano de 31 años que quiso violarla. Afortunadamente la joven supo reaccionar a tiempo. Es lógico que Matteo Salvini quiera expulsar a los inmigrantes ilegales. https://t.co/RZAWrhhtnG",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @reginabisex Unmnmnn imagino q tú eres así ó más puta",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Estoy FLIPANDO. Le estaba diciendo a este chico que mi padre pegaba e insultaba a mi madre, que tiene dos denuncias por violencia de género y órdenes de alejamiento y se puso a decirme que él jamás pensaría que la mujer tiene razón, que si eso me pasó a mí es porque soy árabe https://t.co/JERLbuZynK",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Mientras los manteros atacan a turistas y hay reyertas en el Raval, Ada Colau ha visitado el pueblo italiano de Riace, repoblado dando casas a inmigrantes y refugiados, un \"ejemplo de acogida, integración y lucha contra la xenofobia\". Pues que se quede allí. Indefinidamente.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Acá me ven y ya me hablan español, más sudaca no conseguís.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @elisacarrio Callate gorda borracha hija de mil puta sos lo peor de la politica argentina ya lo dijo don Raul Alfonsin",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Bajo a sacar a mi perra al paseo y pasa un africano y se sienta enfrente de mí a mirarme fijamente desnudandome mentalmente pq aquí a 40° voy con un mono de playa y no debe estar acostumbrado. Me he tenido q levantar e irme pero no puedo denunciar por acoso porque es inmigrante.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: eres un moralfag @sanchezcastejon espero que todos esos putos moros que entran a nuestro pais los pongas a trabajar sacando petroleo para NOSOTROS y luego los devuelvas a su tierra natal: NUKETOWN(CALL OF DUTY BLACK OPS 2: Zombies)",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: - El otro día me comí a Laura es muy fácil que guarra jajajaja - Laura también te comió a ti entonces tú eres igual de guarro e igual de fácil. - Puto feminazi putas modas eres feminista solo para ligar bien queda gilipollas - em, ok",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @xSuzuHopkins @gimme5yens El de mi polla a granel. Que te calles, virgen.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Que vengan unos indocumentados a reírse en nuestra cara, que nos agredan, q la justicia pase, que les demos los mejores cuidados, dinero para comprar en Primark, sanidad, paguitas y vivienda... es que somos gilipollas, tontos, subnormales, idiotas.. #DefiendeEspaña #StopInvasion https://t.co/wiNCBnndzX",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Conchetta9 Bien sabes que la inmigración a Europa de gente de origen árabe es un movimiento impulsado por Soros y los sionistas para crear caos ahí, en Europa.  Venganza ancestral de judíos contra vaticanos romanos (año 70 arrase de HieroSalem). Arrasar ahora el Vaticano. https://t.co/WXj499wA9D",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Si somos sudacas que no se note (?) https://t.co/XD4UoApwoL",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Cada año que pasa peor es la fiesta del inmigrante",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: miespana1 puta. zorra. guarra. falsa. hijueputa. feo. nazi. putón. furcia. imbécil. zopenco. gilipollas. subnormal.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: 80,000 menores han entrado en España solos desde Marruecos, luego llegará la reunificación familiar, Padres, Hermanos, Primos, Abuelos etc. ¿Para que los envía Marruecos? ¿Alguien pide explicaciones a las autoridades Marroquís? ¿SON INMIGRANTES O ENVIADOS PARA INVADIR ESPAÑA? https://t.co/II7nkh5Xii",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pues a mi el hebreo o lo que farfullan los sionistas me suena muy parecido al árabe. Lo digo por lo racistas que son con todo lo que este relacionado con los árabes. https://t.co/bdXtFVeDr0",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @showproblemaC9 YO CREO KE LA MUJER ES UNA ALTA ZORRA....!!!!",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @shachuasg @katyperry Cagado! La mujer es perra perra perra",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: tu vete a la verga, puto sudaca",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Lo único que debe votar una mujer son sus tetas cuando hacen deporte. #GravedadAnteTodo",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @KaaSeeeR Q ya lo sabemos callate ya puta",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @suicideroom22 Cállate que la que clava el visto sos vos Zorra 💔",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @maricucha568 @TRICICLODELPERU @roxcanedo Tu eres puta..tienes maridos seguro",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Sanidad universal para todos, techo, comida, una paguita ...  No entiendo nada.  ¿Habremos cedido nuestra soberanía a Europa y nadie dice nada?  🔴Alarma por los más de 50.000 subsaharianos que esperan en Marruecos para cruzar a España https://t.co/sR4925BNLJ vía @elmundoes",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pensar que la mujer es una perra de por si es algo horrible, pero que eso sea por celos, es una conchudez.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: DÉJATE DE WEBIAR ZORRA MAL PARIDA YO NO TE TIRO WEAS VKOOK EN LA CARA MARIA JAVIERA TE VOY A SACAR LA CTM https://t.co/ofEH8W3Gor",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: -Un corte en la garganta y se dejaba de dramas. Pero como es una zorra dramática... 🙄🙄🙄🙄- https://t.co/YiqS05R5c8",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Somos animales: tú eres una perra y yo la ladilla que no se quiere despegar de esa totona.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @piaverdinelli_ Shhh mori callada crota, anda a mandarle fotitos a mi ex que para eso servís nomas PUTA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Varela_Nat Cállate perra que sos si me habré tenido que esperar que te arregles",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Paola5Navarro @susanag80268937 @ho_elvy @UniNoticias Mejor tu cállate zorra que tú pides likes a tus fotos horribles en Facebook y está bien fea jajajaja 🤣🤣🤦🏻‍♂️",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Algunas mujeres se quejan tanto del acoso, pero ahi tienen fotos enseñando y/o sacando el culo 🙄😑",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: La #Inmigración, como sabemos, es mala, se ha demostrado en media #Europa. Pero no debemos caer en la tentación de salpicar nuestra #soberanía con extremismos, tenemos que defender lo nuestro, si, pero desde posiciones conservadoras y no radicales. Es lo mejor. RP",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @juulivillalba Tu eres una zorra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Qué es un partido doble mixto de tenis? Un single de hombres con obstáculos.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Nosotros como tu dices seremos gentuza,tu eres una gran hija de puta,además con pinta de zorra@LaFallaras",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Así como a muchos les encabrona que les digan negros a mi tambien me encabrona y doble que me digan güera, para mí no es un alago ni mucho menos superioridad",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: La mujer a su marido: -Llevamos 20 años casado y nunca me has comprado nada +¿Es que vendes algo? #Afregar",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: El Arabe es un flojo",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @AzulOKey Jajaja callate gila, inviame y voy perra !!",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Nosotros NO, son mas los sudacas y centroamirdicanos; y lo peor, es que pasan por mi país violentando gente porque \"no tienen dinero\", \"porque van en busca de una vida mejor\"; Y ADEMAS ILEGAL https://t.co/j2O2kr0TI2",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Que despues de la negra de origen arabe que entro en mi casa en D  de 2015, non tiene perdon ni efimeros las miserables.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Cuando veais a los pobres muslims, acordaron que ademas de sangraros gracias a las ayudas y subvenciones que nuestros mayores no reciben, se llevan el dinero a traves de mezquitas y locutorios... https://t.co/zX6FtMmLbc",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Modo avión modo diablo modo arabe",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Segui comiendo chipa y revocando paredes, negro indocumentado, ojala te rompas todos los cruzados https://t.co/oUlBNcKVs8",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Los inmigrantes vienen a quitarnos el trabajo a los españoles https://t.co/DNlA7pYb5E",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @patty_m_i Jajajajajaja que perra cállate // resolución de 2018 poner atención",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Asi son los conchuditos, deci que no estaba yo o lo apuñalaba https://t.co/GvkBJTPXln",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Un sirio-libanés narco-terrorista y un cretino colombiano indocumentado títere de Cuba... Este par de malditas piltrafas gobiernan en Venezuela... https://t.co/KMU1rscH5C",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: #españaesuna #stopUE #stopOTAN #stopLGTB #stopglobalizacion D_Nacional Los españoles, lo primero. D_Nacional: RT D_Nacional: Alarma por los más de 50.000 subsaharianos que esperan en Marruecos para cruzar a España LA INMIGRACIÓN MASIVA VA A DESTRUIR ESPA… https://t.co/MpyJFspCsK",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @DeenisseMb Jeje callate perra",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Hay algunos güeros por los que dejaría muy de lado mi amor por los negros.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @_BarbaraBlade Para mi una mujer es perra sólo si comete infidelidad; si la chica está soltera ¿qué diablos le impide acostarse con todos los manes del planeta? Un man lo hace y nadie dice nada, ¿quién les da el derecho de juzgar por lo mismo a una mujer?",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pobre JP no se merecia ser traicionado de esa forma tan ruin y sucia, esa zorra que iba de enamorada pero luego lo vota traicio... — Pero si Ashley no iba de enamorada, JP era un perrito faldero de Chrissy así que nose donde ves q... https://t.co/WjlNyOf1HE",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Porque las mujeres pierden la regla a los 50? Porque necesitan la sangre para las varices.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: -Africanos saltan la Valla de Ceuta armados y hieren a 22 Guardias civiles. -Manteros que no pagan impuestos y arruinan a los comercios, toman el control de Barcelona, su Alcaldesa lo permiten. -Turista defiende a una mujer, los manteros le pegan una paliza. El feminismo calla. https://t.co/lVbA33OGk0",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: LA SOLUCIÓN ES SOLDARLE EL TIMÓN DE LA PATERA RUMBO DE DONDE SALIERON CON AGUA Y COMIDA. https://t.co/59pInBdgnR",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿Por que las mujeres se casan de blanco? Para hacer juego con el refrigerador, la cocina y la lavadora. #Humor",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Comentario ESCATOLÓGICO: Si no hay papal del culo, deben abstenerse de acercarse a la valla de Melilla, al menos hasta que los \"lindos negritos visitantes\" estén ESTREÑIDOS. https://t.co/mpuxy1wXnm",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Que es una Mujer embarazada de dos nenas y un varon? Un kit de limpieza con instrucciones.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: No sé dónde vives pero la delincuencia que he visto yo cuando he ido de vacaciones a Madrid y a Barcelona es absoluta vale y estos señores al no tener papeles se ven totalmente Internet de lo que les pueda pasar sin miedo total a la ley https://t.co/dikQdlSUk5",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @g23_o Cállate perra de Twitter",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Mientras el común de los mortales padecemos una oleada violenta de musulmanes subsaharianos y una ola de calor 🔥 subsahariano abrasante, los proletarios @sanchezcastejon y sus adlateres de vacaciones de millonario. Que bien viven los proletarios de hoy en día. #SanchezDimisión https://t.co/hZrNNVSg9i",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Su novia es puta",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Esmexcnco @uggzo Hola reyna tu eres cncowers y apoyas a esta uggly zorra no lo puedo crerr",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: A mí esto de que los ilegales subsaharianos se beban cubatas con mi dinero, no me acaba de convencer",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: en eeuu pusieron a los nenes inmigrantes en una jaula, en venezuela a unos pibitos los pusieron a hacer el censo automotor, en argentina te romantizan que un pibito hace la tarea mientras vende cosas en la calle. https://t.co/1vnQGvszBQ",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Sigue Hiriart pero para que se largue a Chile y dejé de estar molestando a los mexicanos larguese asqueroso sudaca. https://t.co/jD3RnqEvXr",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @multimediostv Que por cierto Danna Paola tu eres una gata asquerosa y una soportable zorra celosa yo soy fan de camy G y la defiendo sea quien sea el olla y sólo soy un chavo aún así la defiendo me leeiste y me oistes Danna Paola babosa",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Stolbizer @mainesCyN Callate la boca perra siberiana metiendo a CFK en esto! Sos tan pelotuda podes ser! Nunca seras nada",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Según mi abuela Natacha Jaitt se merecía que le pegue su ex. Por haberle hecho 'eso' a Latorre, por qué es puta, por qué salió tarde, por qué fue mala toda la vida. https://t.co/cMGdAYrkdC",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @xiuvoice CÁLLATE ZORRA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Ea pues ya solo falta que Albert Rivera vaya a Algeciras a abrazarte con los inmigrantes subsaharianos",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @mj_vasquezv Jajajaja callate zorra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: La \"marcha negra\" acelera el paso: más de 40.000 subsaharianos esperan en Marruecos para entrar ilegalmente en España https://t.co/0MHGJNwJoz  ¡¡ Okupa Monclovita,...¿Ya tienes pensado donde cobijar a toda esta gente...?Prepara barracas en Moncloa, creo que hay terreno...!!",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @troncomachin Que te calles puta de mierda https://t.co/65oVOwG1by",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @califffournia callate puta x lo menos yo tengo la custodia",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: PFFFFFFFT. Ya wish, güera.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Hola mi ex es una puta loca de la cabeza y tú eres un puta porque no quisiste estar conmigo y cuando te vea te voy a faltar el respeto en tu cara porque yo soy muy bueno, me pasan estas cosas en la vida de bueno que soy.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @azucenau @navarreteprida @MarcelaGuerraNL @mileniotv ¿ Esas mujeres son las que se quejan del acoso...? ¿Sí habrá quien las acose...?",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Increíble...solo en este país de sudacas negros https://t.co/PvBhzcCWNz",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @CLAUDIABAVEL @AmarnaMiller Pues claro... Porque el tío es un 'triunfador' y ella... ¡Ella una guarra busca fama! Lamentable...",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @ikigaiguitar CÁLLATE PUTA YA VAS A VENIR POR MI CONOCIMIENTO EN PEDAGOGÍA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: NO ES CULPA MIA UUUUO, LA ZORRA DE TU NOVIA QUIERE ARRANCAR, NO ES CULPA MIA, UUUUO",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: #ElCascabel01A Se que voy tarde pero dedicado a la idiota rubia que está en la tertulia  Estoy fuera de España, en una ciudad del sur, esto está lleno de subsaharianos y no digo nada de lo que parece..... A los 4k de inmigrantes lo llevaba a su barrio y después hablamos",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @maitezamora4 Callate zorra si a vos te gusta estar con todos",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: El que viene en yate de lujo no viene a pedir, si acaso a negociar. El que viene en patera no viene a dar, viene a consumir los recursos sociales de los españoles. Si cada uno de los 4.000.000 de populistas que los quiere, se llevara un sólo inmigrante a su casa, asunto resuelto. https://t.co/iN5bBll9gI",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Una mujer va a una biblioteca: -¿Por favor, los derechos de la mujer? -¡Ah, sí. Por la sección de ciencia ficción",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @VidalSieteDiez Tú eres la perra, no te dejes engañar.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: No son subsaharianos, son Negros. Que yo sepa, Sudán y Níger están en el Sáhara. #FronterasSeguras",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Igual no me la baja nada porque me estoy re perra está imbécil me va a venir a decir algo toca de acá",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: yo: quién tú eres tú bizcochitooo (cantando) mi mamá: a la tenés clara puta Jajajajaja me estallo",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: A ver quién paga la factura y cómo se reparten el marrón de dejar inmigrantes ilegales sueltos por sus ciudades (y que los votantes no de lo hagan pagar dentro de un año)... https://t.co/CehRdJsSdU",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @lortegadiaz Perra maldita tú eres la primera en la@hoguera por crímenes de lesa humanidad perra maldita",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @TarekWiliamSaab Y tu eres una PUTA muy util a maduro y la banda de delincuentes...",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Estimados @FcpysUNCuyo quisiera saber por qué tienen a este antisemita dando clase en su universidad ¿avalan este tipo de pensamientos? ¿esto es lo que se enseña en la materia “Estudios Árabes Contemporáneos”? https://t.co/kDMw7OrLuH",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Perdòn @CeciliaAF1  agregaría para esto al sr pdte @sebastianpinera  Dar un telefono de DENUNCIA para inmigrantes indocumentados Gracias! https://t.co/DUAIZabS5O",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @GrPepe tu novia es una perra Tiene las mismas tetas que una perra preñada JAAJJAAJA Que asco Tanto Ego que tienes mmgvo",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: #ChileParaLosChilenos fuera la escoria inmigrante! @sebastianpinera traidor vende patria",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Si ella me quiere enseñar las tetas? pues vale no voy a ver nada nuevo puta❌ Si ella me quiere enseñar el cerebro? pues de puta madre podemos hablar de los microorganismos del funcionamiento de las moléculas ✅ PD: EL culo y las tetas se caen date a girl with cerebro es eterno",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @EPN @JuanOrlandoH @sanchezceren @jimmymoralesgt ¿Qué estás haciendo con respecto a tus niños ciudadanos indocumentados en mi país? Debes asumir la responsabilidad de tu gente.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: España está siendo invadida por los subsaharianos, y aquí Don TONTO, jugando al corro la patata, desde la Moncloa #caminodeVenezuela #Señorllevamépronto https://t.co/h4XmWQLVW7",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Estoy a un solo cliente que no me diga \"gracias\" de irme a la frontera de Ceuta con Marruecos, sentarme en una mecedora en la valla con una escopeta y decir \"Ahí vienen los podemitas, HOY NO PASÁIS, NEGROS\"",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: En mi calle un pavo gritando:  \"SUDACA DE MIERDA VEN AQUÍ, QUE TE MATO. QJE BAJO HEMOS CAÍDO LOS MARROQUÍES. INDÍGENA DE MIERDA\"  Y bueno yo me sorprendo a medias de la estupidez humana",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Justin_ori42 Callate la boca que pareces mas gobernada vos que yo y eso que supuestamente estas sola, ni a la plaza salis perra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Es la hora de la siesta. ¿Cómo se dice 'siesta' en femenino? Fregar los platos.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿por qué Dios hizo a las mujeres con los pies más pequeños? Para que puedan acercarse más al fregadero.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @AgusssLarrosa callate perra q t haces llamar mejor amiga zorra del orto aprende a escribir chau",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: #politivida Si no te gusta, puedes cambiarlo. DESTINO SUDACA   https://t.co/2tpPakccSk",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: -¿Porque los gallos no tienen manos? -Porque las gallinas no tienen tetas",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿Qué hace una mujer trepando una pared de vidrio? Quiere ver que hay al otro lado",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Everfetts Cállate y respóndeme perra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Aquí podemos ver un grupo de simpáticos moromierdas, basura de la que a @sanchezcastejon le gusta tanto recoger del mar. Como se puede apreciar están totalmente integrados en la sociedad europea. ¿Son o no son como monos salvajes, sucios, delincuentes, violadores y pendencieros? https://t.co/lbZH8Iu92B",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: HAY COSAS QUE POR SABIDAS SE CALLAN PERO POR CALLADAS NOS OLVIDAMOS DE QUE EXISTEN PAGARAS PERRA Y CON LO QUE MAS TE DUELE TUS HIJOS AUNQUE TINES CARA DE LESBYCA https://t.co/fEjCFaBAHE",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Que ladilla esos malditos árabes con su llamadera por fb.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Putos moros se están cargando el pais. https://t.co/qdgb9PM3FY",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Ojalá que te vuelva toda la mierda que tiras negra conchuda y la re puta madre que te re parió. Te mereces que re rompan la cabeza",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @OficialYuri De hecho Dios vomita a los tibios. Y tu eres tibia. Hipócrita. Puta a escondidas. Doble moral. Ya estas vomitada https://t.co/noOHOXP11u",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Vuelvan ahre quiero un novio asi, mi novia es una zorra y estoy enojada asi que quiero uno asi ahr mentira https://t.co/hi5JPVcgs2",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿Que es una mujer inteligente? -un travesti.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Por qué las mujeres tienen el agujero del culo y el del coño tan juntos?Para poder agarrarlas como un pack de cerveza.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Imagínate si hubiera sido güero hubiera sido mas mamón",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Ya por fin con 98% libre de puntas güeras https://t.co/BduFMrM6GF",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Cuando Franco esto no era un coladero de P moros y P musulmanes sin papeles",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: -Le he comprado un collar a mi esposa. +Coño, pues yo todavía la tengo suelta.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @prssrx desnudas provocais al igual que un hombre, simplemente porque es un instinto humano.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Venga, más hijos de puta de refugiados, ni llevándoles a vuestra puta casa se acaba esto, putos moros de mierda.  Antes tenía algún moro por mi perfil, creo que ya no queda ninguno. https://t.co/zpH4qeP6Zi",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Por que las mujeres van de a 2 al baño? por mientras una caga la otra le aprieta la cabeza para que salga toda la mierda.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: A la frontera con ellos a que impidan que la salten los subsaharianos. https://t.co/2A0MF0eVBj",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @lortegadiaz TU ERES CULPABLE DE ESTA DESGRACIA Y QUIERES LAVARTE TU CARA MALDITA PERRA @lortegadiaz HÁBLALE AL MUNDO DEL GRAN FRAUDE A LA NACIÓN. UNA IMAGEN VALE MÁS QUE MIL PALABRAS. https://t.co/xFsTdrAtUA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pobre moromierda. Pues a mi me parece mas digna y respetable la vida de una linda gallina que acabará en un KFC que ése semita culturizado en el país de la violación que acaban de  dejar libre https://t.co/lrL1K09aIb",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Los de la Under le pasaron todo su pene por la cara a Sudaca en traer al gran papacho",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @santotv4 cuando me hicieron la casa vinieron trabajadores indocumentados de Argentina que no estaban registrados.  Mi casa fue la que expusieron en el Prado hasta el día de hoy tiene entrada de agua por todos lados y problemas enormes sin solución",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Tu novia es más puta que se sacó un ojo para tener otro hueco, son pajeros😅😅",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Las viejas de antes, puteaban bonito para ganar dinero. Las de hoy acusan de acoso o violacion a algún pobre y buen hombre.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Abro hilo recopilando todos los actos de violencia llevados a cabo por los inmigrantes sin papeles que tanto le gustan a la izquierda. Además, también recopilaré las paguitas que reciben a cambio de nada, puesto que pagan CERO impuestos. Empecemos. #UngaUngaArmy",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: -¿En que se parecen las mujeres a los delfines? -en que se cree que tienen inteligencia pero no se ha demostrado aun.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿Qué hacer para que a una mujer le brillen los ojos? Ponerle una linterna en la oreja. #SinCerebro #SinDerechos #SinPolla",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Uhm... Los árabes parecen delincuentes.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Aún tengo mis dudas porque dicen que un hombre es puto por estar con hombres, entonces, ¿una mujer es puta por estar con mujeres?",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: candidato cd desarrollará plan para jovenes emprendedores.como vender aguacates.como ser indocumentado y violar la ley como vendo platano.como limpio parabrisas. Sin incubadora real de negocios con financiamiento;esto traerá peleas en semaforos de los emprendedores del aguacate",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @EmiiiMorenoo Callate zorra, bueno ahora si me voy a dormir",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Albert_Rivera El gorrilla (aparcachoches) que es de toda la vida los multan y ahora viene un gorrilla subsahariano y no pasa nada",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: INMIGRACION ILEGAL DEPORTACION ¡YAA! Y ENTRE OTRAS COSAS MENOS RIESGO DE TERRORISTAS INFILTRADOS ¿NO? - Un mando único policial para combatir inmigración ilegal https://t.co/UxYyEMH8T3. vía @EPExtremadura",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿Esto podría explicar el brutismo caribeño y el subsahariano? ¿Habrá correlación?  Extreme heat linked with reduced cognitive performance among young adults in non-air-conditioned buildings: https://t.co/hRcb6n7jHQ",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @rajas35 @SoyElMrPayaso Callate perrita... traes la polla dentro... te mueves y te duele mas. Perrita comodina 😊",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @GarayCeci Jajajaja cállate perra y hace un bebe",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Cuando decís que una mujer es guarra en la cama me la imagino lanzádoos caca y haciendo pis en vuestra cara y me río mucho.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Nivel 4 reforzado es igual a recoger 400 inmigrantes cada día . https://t.co/RVYHv6mL06",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @DaniBalmaceda98 Cállate perra, nunca más nos juntamos (?",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Hay varias paginas de feministas a las que deberia darles verguenza exponer sus ideas ya que no tienen ni pies ni cabeza",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: -¿Por que las mujeres tienen Un sexto sentodo? -Porque no usan los otros cinco",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @SamBelenn Callate vos sos una puta reprimida ajajaajaa",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @OrainGipuzkoa De qué viven los magrebíes y subsaharianos que veo diariamente en terrazas de bares? Les ha tocado la lotería? #pregunta",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Los Venezolanos llamamos por años: Ladrones a los Chinos Tacaños a los Árabes Mala gente a los Colombianos Indios y feos a los Peruanos Vagos a los Panameños Y venimos a indignarnos cuando nos llaman Venecos en otro lado.  Xenofobico el venezolano, para nada .",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pues que manden allí a todos esos que saltan la valla  de Ceuta https://t.co/CWoUCoXBQs",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Si la lucha contra el machismo consiste en que ellas se desnuden constantemente, los hombres estamos de suerte. Sigan luchando ;) #TetasFree",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Tú eres de los 70’ Y yo soy una zorra de los 90’",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @vickkysanchezz Cállate tu puta zorra 😒👅",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @IvanDuque presidente en Cúcuta , tenemos problemas con venezolanos que se disputan territorios como si estuvieran en Su país !!! No se como indocumentados pueden estar acá  cerremos la frontera y saquemos  aquellos que delinquen y hacen cada día más daños a nuestros ciudadanos",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: claro tenían que ser árabes musulmanes para hacer sus pendejadas y luego lo mezclas con veganos fanáticos y sale una porquería ademas de obviamente maltrato psicológico para los niños https://t.co/BugA1lNW3a",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @CamposYuliyuli @Pauliitiiz Callate vos sos capaz de venderte zorra.... 😂",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @__wangpuppy Que voy yo y te pego con un pene en la cara cabrona",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Dentro de poco vamos a tener malaria por todos estos negros sudacas de Africa SUDACAS DE ÁFRICAAAAAAAAAAAAAAA",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Un tio de 26 años de Camerún (pais en guerra, espero que note la ironia). Con dos hijos que no puede mantener (como la mitad de los africanos). Que dice que se ha dedicado a violar menores y animales desde que salió de Camerún... inmigrante económico como él dice....",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @policia la Malagueta está llena de indocumentados tocapelotas. Gracias por vuestra inestimable ayuda con la recogida de residuos orgánicos",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @tu_bombon22 @PonquesitoRico Jajaja tu eres una puta seria? 😈 interesante",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: [3/1 03:47] Aa Brii: Boluda mira vos [3/1 03:48] Aa Brii: Sos re zorra y casi no t nombran Lo bueno de hacer las cosas callada 😏😏",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Cuando no opinas como las #feminazis quieren sos acosador/abusador/violador.... 80% de las denuncias de mujeres victimizadas son falsas. #Femimoda https://t.co/PkqOGkjziV",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @suso_linares @Mishaki @Visentico @MrDonZea @earthblues No la he visto todavía. #todasputas",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Alooo, pero tu eres perra, obvio se iba a convertir en perro para que le gustaras duh https://t.co/HmpTDHYkWN",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Que tiene que venir un sudaca de Miami a decir en Telecirco que, Pedro Sanchez están convirtiendo este país en el tercer mundo, porque le han agredido una mafia de manteros. Gracias PSOE, gracias al socialismo. Que buena imagen estamos dando.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿Qué es una mujer encima de una vaca? Una vaca de dos pisos",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Estos son los que nos están invadiendo y nosotros acogiendo como refugiados y regalandoles todos nuestros servicios sociales https://t.co/iRPOROgtwW",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Ya que tú eres de mucha indirecta te voy a decir una cosa. A ti nunca te van a coger para serio, eres puta y la que es puta nadie la respeta. No esperes más de lo que tú no das. Metete con alguien que sea igual que tú y deja a los demás quietos.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Tal para cual: un puto chaka sudaca para una afición de ñeros 👍🏻 https://t.co/lHvOjDfC5m",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: La ropa de los indocumentados es cada vez más horrible, me dan pena chabon, los colores, los modelos, todo, asqueroso.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @mishelleha00 Ya cállate pinche marrana, ya corrieron a tu papá por tus pendejadas y sigues y sigues en tu puta vida entenderás la grandeza de este club",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Allá que vayan las feminazis a reclamar derechos. Los árabes no están con webadas. https://t.co/4ZqvX5COxw",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: En Redes Sociales están las fotos de los supuestos asesinos uno un nicaragüense indocumentado y un costarricense. Muy preocupante que la lacra de #Nicaragua entre a #CostaRica como perro por su casa. https://t.co/8PwkSEhehe",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Q en los vuelos desde VENEZUELA pongan un billete d 10$ en el baño dl avión. Q abran un taquilla d inmigración cuando ya todos estén formados. Q pongan bolígrafos sueltos par llenar la plantilla de migración. Allí pudieran filtrar justamente a los abusadores y deportarlos PATRAS!",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: #EsMuyDeProVida rezar frente al congreso. No nos olvidemos que marchar es de negro indocumentado",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @_ElAguijon los Chinos tienen las mafias de los abastos y contrabandistas de mercancías, los rusos drogas y trata de mujeres, los africanos manteros e incursionan en drogas, llega un hijo de emigrante español con título profesional, con sus documentos y es un sudaca.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: perra cállate la boca y continúa tu desafío 😘 https://t.co/jKWSPZvQED",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: los venezolanos llamamos..ladrones a los chinos que comprar bachaqueado o robado..no hacen facturas al cliente para evadir impuestos..igualmente a los arabes explotadores y vagos que no hacen nada..de resto..malagente,feos y vagos podemos ser unos cuantos venezolanos... https://t.co/IFZyJXua2G",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @KelvexM @JessiiJG @zDeprooz_ @JenniferELM1 tú eres mi oveja puta",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @ramsesfcb1 @0rianaviloria Callate sirvienta",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Alejand64454564 Creo que te lo he explicado antes,la zorra es más cuestión de actitud, que de enseñar nada y tampoco a cualquiera.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: La \"marcha negra\" acelera el paso: más de 40.000 subsaharianos esperan en Marruecos para entrar ilegalmente en España https://t.co/WkcREUbCND",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: No se puede jugar con sudacas niño, tienen el wifi enchufado a la bombilla",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @kanouted10S @kike57108578 Dice claramente mi novia es sevillista y es una puta más ... Evidentemente se refiere a las sevillistas como putas",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @BIoodyCountess < cuando porque poco más puede hacer maldita zorra tetona. No mereces el apellido Bathory.-",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Brenda_boopp @ChrisDiamondx Pase buscando la noche un twit como este... Guarra que bien luces siempre",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @bianlandaida_ @DelffiSalinas QUE ZORRA TE MERECES LA MUERTE",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @PilarBenitoG Cállate perra tú no estuviste ahí",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: LA INMIGRACIÒN DE AFRICA Y PAÍSES ÁREBES ES UNA ESTRATEGIA PARA ENTRAR A EUROPA Y ATACARLA DESDE DENTRO COMO HACE MIL AÑOS HICIERON LOS  BARBAROS PARA DESTRUIR EL IMPERIO ROMANO, EL ISLAN ATACA UNA EUROPA LACSA EN LEYES Y DESUNIDA. MARINA LEPEN TIENE RAZÓN, NADA D INMIGRANTES https://t.co/nzduyEI7x5",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: La chica es una zorra y una cabrona y el chico un gilipollas que se aclaren los dos porque el uno que se revela y la otra le toca los güebos #Pap399",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: LA INMIGRACION LEGAL SI CREA RIQUEZA PERO LOS ILEGALES SOLO NOS CUESTAN DINERO A LOS CONTRIBUYENTES POR QUE SE LES DA DE TODO ¿NO? - La riqueza se crea, no se reparte https://t.co/sJ7cXm9hwp vía @voz_opinion",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @YazElias Callate que vos ni rollos tienes che puta",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Las mujeres son muy simples, sólo quieren que las trates bien, les digas un te amo, tengas detalles bonitos y les leas la puta mente.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: España crea su primer 'campo de refugiados' en la bahía de Algeciras https://t.co/l7Zmh2kvPN vía @elmundoes Gran noticia para el contribuyente español. Españoles a pagar, a pagar. Las pensiones pensad en las pensiones. Esto la sanidad como es gratis podemos dejar de pagarla no?",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: En Mierditerráneo Digital andan un poco obsesionados con las violaciones. Las ficticias. Denunciar que un GC y un militar violaron a una cría de 18 años no queda muy patriota... Gays y un marroquí. ¿Serán gays negros, sudacas o moros? https://t.co/vyb7wrsJbw",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Laloydoris Tu eres tu gozando como una perra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post:  si no hay chicas mañana saldremos a violar jóvenes de aquí...(hahaha) esto no es un comentario de la \"manada\" . Es un comentario en un CiE de inmigrantes que han saltado ilegalmente la valla.  Ver este video https://t.co/D4gBiFQeIl https://t.co/YLVsifVEai",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: De los moros no se puede esperar nada bueno, y esto te lo dicen los propios árabes. Que también han luchado contra ellos.  #StopInvasion #StopIslam #Closeborders #Openborders. https://t.co/MfmBlBK55I",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Que sabrán esos Yankis....si #GrandeMarlaska dice que no haay colapso en los centros de acogida de inmigrantes, adelante con ellos.  La inteligencia norteamericana advierte de una invasión inminente de 100.000 subsaharianos - Rambla Libre https://t.co/Gfmjnhr7MY",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: LA MUJER ES MUY ZORRA,SABE COMO Y Q HACER,PARA CAGAR A UN TIPO,MAS SI EL TIPO ESTA ENAMORADO,o es un boludo,que le cree todo,le compra todo,le da todos los gustos,y termina cagado,,Yo solo quiero recuperar a mi hijo,,esa mina,se lo llevo,no me deja verlo, https://t.co/LC56ZBBOli",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @DrodriguezVen tu eres la perra mas perra de las perras",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Ikana_Kami @franco_esca Tu si puta. Tu eres diferente. ❤️ Felícita navidad, Año Nuevo y Reyes wey! Ya no te dejas ver.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @ERROR14501 @BIZARROMAN09 Callate perra y no",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Telediario de las 15 h: - alemanes siembran el pánico en metro de Valencia. - rumanas carteristas en metro de Barcelona. - árabes agreden a turistas en Barcelona. Racismo? NO",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Hay racismo cuando no creen que soy su hermana porque soy güera @unpentagono @medicenlore https://t.co/9iHeSpHOIi",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @TaigaDeLimon gritame y pisame la polla con una falda puesta",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Yo si fuese @pablocasado_ incluiría en mi programa la construcción de un muro en el estrecho de gibraltar y que lo paguen los propios subsaharianos.  #DonaldCasado #PabloTrump https://t.co/WDdVp9Nmuh",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Tu chica es un poco guarra 😊 — Quién se supone que es mi chica https://t.co/bmgezed3wY",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: #DebatePorElFuturo @NicolasMaduro LOS BUHONEROS al cual le han dado el nombre de ECONOMÍA INFORMAL,en su gran mayoría, son indocumentados COLOMBIANOS y de otros países, muchos usan la fachada para vender drogas y cometer ilícitos, esos mismos, son ahora LOS BACHAQUEROS. Análisis.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @ivfkn callate puta, las putas no hablan puta puta puta.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Lo que se consigue con empresarios canallas y masiva inmigración ilegal que permite bajada de sueldos y de derechos laborales por la enorme oferta de mano de obra barata. Y los políticos la mar de contentos. https://t.co/qrlaRgILbd",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @_JBonilla_ @CanalYesTV Cállate perra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Un subfusil y me voy a la valla de Ceuta. O a Tractoria. No pasarán",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Em vez de tapate, te diria callate guarra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @abc_es @HiginiaRoig Ya está la niña del exorcista diciendo tonterías. Has visto lo que a hecho la guarra de tú hija.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Putos moros y negros que vienen a invadir España!!! https://t.co/01Ol8Te5cK",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @zvonimirsoldo @FOXSports_Chile No quería empezar el año puteando pero vo te mereces unas chuchas tonto sapo y la ctm rata perra culia :)",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @VictoriaChi_ Puta que sad callate",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pinche zorra — porque, tu eres puto https://t.co/WShh423ejM",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: SI YO MANDARA EN ESPAÑA AQUI NO ENTRABA NI CRISTO SIN PAPELES QUE SE VALLA A SU PAIS https://t.co/DM40KLgEHA",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Los polideportivos que financiamos todos los andaluces para que puedan hacer deporte nuestros jóvenes, están siendo inutilizados e invadidos por subsaharianos y musulmanes",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ESTA MUJER ES UNA ZORRA 💖💖💖💖🔝",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @ConCiliaFlores @NicolasMaduro Jajajaja cállate maldita perra de mierda ladrona de bancos",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Ay Güero guerito te tenían que matar",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @EstefCastilloS ojala te vayas al infierno, que la vida te de todo lo que te mereces por puta.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: #SabiasQue el cerebro de la mujer esta conectado al culo? Porque cada vez que piensan la cagan",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @eduardoc60 @RuiDeAzevedo411 Rui si tu eres una perra enamorada",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Antoniuruizd @Relatofeminista Es super emponderante ser puta , es un trabajo, no lo sabias?? Y vender tu cuerpo y a tu hijo, ya ni te cuento! Empodera la hostia!! Y ser gender fluid la rehostia!! Es el nuevo pack neoliberal! Tres en uno!!",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: #yaesmediodia32 los comunistas cuantos asesinatos cometieron con Franco no te violaban por la calle no tenías moros con navajas atracando no te ibas a trabajar y te okupaban tu piso manteros drogas y asesinos y rumanos sudacas con 150 detenciones",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Alardeáis en defender el CUERPO de las mujeres, quieran ellas ser defendidas o no. Ahí si hay FRONTERAS. Pero España no es UNA MUJER. Defendeís y fomentáis que sea VIOLADA por miles de desconocidos y fornidos varones subsaharianos. Estáis chuleando a vuestra PATRIA. Lo pagaréis.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Italia: Una mujer evita con gas pimienta un intento de agresión sexual de un inmigrante ilegal nigeriano en la estación de tren de Milán. Esta es la realidad de la inmigración ilegal. https://t.co/YybrILTiRk",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: A los mexicanos que cruzaban a EEUU les llamaban espaldas mojadas A los guiris que vienen de veraneo a España les llamamos espaldas quemadas",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @IrantzuVarela Claro porque todo lo que hace un pene esta mal y todo lo que hace un coño es maravilloso... A ver si te tropiezas con todas tus generalizaciones",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @CaELiKe @ElChamoSalas YA CALLATE PUTA VIEJA DRAMATICA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: los estupidos \"árabes\" de la universidad https://t.co/QhxBVSRmMx",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @puerk_jimin Te lo mereces mi amor. Eres una puta arenosa y me pena compartir planeta contigo subserie, eres inferior a una cucaracha... Además no te reflejes en los demás cuela, das pena. Besis en la cola ;3",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Una web islamica anima a los moromierdas a venir a España a vivir de las ayudas públicas. Esto es lo que consigue ⁦@sanchezcastejon⁩ y su efecto llamada. https://t.co/otWmEQbi8s",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿En que se parecen las mujeres y las polillas? En que unas comen tela y las otras te la comen. #EnTuJeta",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Enseñan al pueblo Español a amedrentarse frente a un enemigo, yo enseño a mis hijos a saber defenderse, sea mantero, presidente del gobierno o saltador negro de la valla de Melilla!!",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: -MACHISTA! -Machista ¡¿yo?! -Machista Dios que os hizo inferiores",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Los árabes inteligentes y creadores de civilización brillaron desde los inicios de la humanidad hasta la época en que el Islamismo poseyó totalmente a ese pueblo y lo relegó al oscurantismo y el atraso.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Mis tios diciendo que ines arrimadas es una zorra, a ver callate la boca",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Muchísimas gracias!!! Además, con la inmigración de los africanos, nos vais a llenar las calles de heroína y comercio ilegal... Gracias de todo corazón! Además de acortar nuestras listas de espera en la sanidad, gracias a la sanidad pública universal. 👍 https://t.co/7rm0mAai4C https://t.co/gY6bTH0MG3",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Hay mujers inteligentes, si. Son hombres que se han operado de cambio de sexo. Al revés no.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Que nacionalidad o etnia crees que se adapta mejor a la vida occidental europea (tema derechos y libertades, mujer, lgtb, convi... — Pf... Mejor... Chinos, porque yo creo que ya estamos muy acostumbrades y idk  Peor, los árabes yo... https://t.co/YcmdcFwxcg",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pregunta para la izquierda. Esta es para nota.  Si abrimos las fronteras indiscriminadamente y sin control, y un inmigrante agrede a una mujer, inmigrante también, con la que está en una relación sentimental, ¿cómo se le localiza para citarle a juicio después de la agresión?",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Sin la Reconquista, no habría España  sino Al Ándalus, de lengua árabe, religión musulmana, poligamia, mujeres con burka, enorme analfabetismo, sharia…Los efectos de la Reconquista son plenamente actuales. ¿Entienden por qué es indispensable conocerla? https://t.co/QEqqdxkA5i",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Hija de puta, pero para los moromierdas, lo que éstos hijos de puta le pidan a la primera zorra de Barcelona. https://t.co/qe3pf9kAhc",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Y que haya en este pais españoles RETRASADOS que apoyan la inmigración. https://t.co/IHJ6pR34qn",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @ladivaza Vamos DIVAZA TU PUEDES 💝👑 TU ERES LA MAS PERRA ❤🎆👑",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿Os imagináis a SEMEN como una opción en las elecciones? No nos interesa, pero quién sabe. Eso si, ni una sola mujer en el partido...",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Si estamos cogiendo ejemplo de los Arabes, mal vamos. https://t.co/vQAPjspj8V",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Anamontesino7 Vos no mereces vivir PUTA REGALADA, PAPONUDA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @davidpepi00 Cállate perra que estás igual",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Marialupe__ Si me pasó. La perra de la ex de mi novio hacia lo mismo lo chistoso es que el sabe que pongo & que no. Todas ridículas.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Racismo es que no haya güeros en aprietos. 🙄😆",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: En vez de derrochar el dinero en los inmigrantes indocumentados, preocúpese mejor de nuestro ancianos https://t.co/GiqiwGSpEP",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Todas las perdonas güeras son bien maricas.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @juantaverash El acoso en la mujer es tan solo cuando el hombre no le gusta, si el hombre le gustara, no fuera acoso!!!",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Lisa agradece que tenes un dueño con corazón porque te mereces que te ahorque perra hdp😡",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: el es un capo!!! la mujer es una zorra !!! https://t.co/8WMjuYt3Uh",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: ESTO NO SE PUEDE PERMITIR NI TOLERAR, QUE VAYAN HA HACER EL SALVAJE A SU PUÑETERO PAIS ¡ESTAN POR CIVILIZAR! ¿NO? - En @elconfidencial: Más de 20 guardias civiles heridos, algunos por cal viva, tras el salto a la valla de Ceuta https://t.co/4NMcSXKvHk",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @ernestog_v Cállate el hocico perra, básica tu gfa y otras ciertas personas que conocemos jeje, lo puse por cosas que me han pasado y ahora finalmente me han hecho pensar así, mejor ve a joder a tu minion fav ok, d antemano grax",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Hombres de España. Que no os frene el voto femenino. Somos más y nuestra opinión sigue contando más. ¡TodOs a las urnas!",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Le puedes dar un pez a un hombre y comerá un día Como le des una caña a un subsahariano fabricará una lanza y atravesará a un guardia civil",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Nos hicimos una pregunta el #17A de 2017 en #Barcelona. Otros muchos se la hicieron. ¿Con el mogollón de negros subsaharianos manteros que hay siempre en la Rambla, cómo es que ninguno fue arrasado por la furgoneta de Younes Abouyaaqoub? Ninguno entre los 15 muertos en Ramblas. https://t.co/2BPauvgb7Q",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @cualquiercositv @elonmusk CALLATE PUTA DE MIERDA, RESPETA AL DIOS",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Emily_Guadiana1 @PPTeamKaren YA CALLATE PERRA PLIS",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @ReniiiT cállate perra... te sigo dónde quiera....",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: #Catalunya #Canarias no queremos indocumentados en nuestro pais desde Barcelona hasta #lanzarote existen estas mafias que no cotizan vendiendo en la calle arruinando a los pequeños negocios y prostituyendo a las mujereS  #Idonotwantmafias in #Spain 🇪🇸 https://t.co/QkByE3bDnb",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: 2 y 2 son 4, 4 y 2 son 6, 6 y 2 son 8 y tu eres puta a los 16🎶🖕",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @jsplassme CÁLLATE PERRA, HIJA DE PERRA, SOS UNA PERRA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @pnique Inmigrante motorizado,eres una rata de cloaca.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Steffers__ Hija de puta. Callate pinche chismosa",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: La zorra se queda callada porque sabe que mi combo es puro power 🔥",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Igual vas a recibir lo que mereces. Perra.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Más de putos moros  https://t.co/7csHuuOvzP",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Estamos en 2018 y una mujer es llamada puta, zorra, trola por tener muchos amigos",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Los manteros subsaharianos corren a sillazos a la Policía https://t.co/OXY9ZhnW5y vía @Periodistadigit",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Maby80 papa para ve a dormir q te quedas dormido aqui y lo q te decia en q tenia sueños con un niño o con un viejo aquel viejo de la bicicleta y los perfumes jejeje donde estaran los arabes come mierda.... recuerda bien q me dan lastima y q van hacer si son.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Se debería incluir en las escuelas la asignatura del Islam, ya que para el 2050 España será mayoría musulmana, y así empezar a adaptarse.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Cuantos operarios hacen falta para limpiar una cocina? Ninguno, eso es cosa de mujeres. #CállateYfriega",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @mangelrogel Cállate puta etiqueta dejamos a nosotros los mortales y ve a jugar con tus números...",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Cuando publicas basicamente lo mismo pero sos una sudaca injunada :(( https://t.co/zmpBBHbDfQ",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Es odioso ser perra con mi madre pero te juro esta mujer es insoportableeeee Ok",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pero: -Todas son unas guarras. -Todas son unas putas. -Las mujeres a la cocina jaj -Las mujeres son el sexo débil Vete a llorar a tu jodida casa, trozomierda. https://t.co/OQrW0Pa7NQ",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿A dónde vamos a migrar cuando Europa sea islámica y EEUU latina? #inmigración",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Digamos un suponer, si yo me pongo cerca de la Valla de Ceuta y le tiro piedras o similar a los \"inmigrantes\" que en su intento de entrar ilegalmente en España agreden a los guardias civiles con distintos ácidos, cal viva, etc. Yo sería impune???",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Relatofeminista 'A mí sólo me gustan las tías si son guarras'. Para mí está claro que si usa guarra para adjetivar el tipo de mujeres que le gusta no debe de asociarle las mismas connotaciones negativas que presuponéis. Tengo amigas que se autoadjetivan ",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Aaaa les quería enseñar estas fotos del sábado que me sentía bn perra https://t.co/pgtAiVclTk",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Porque la reportera es Satanás? La zorra de la novia es 😑 https://t.co/NfgNX973WA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Este es el tipo de inmigración que deja muy mal parado al resto de los venezolanos. Desgraciados! https://t.co/aCv9hiHXmd",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: De mis punterías. Tu eres la puta mayor",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿Que es lo último que se oyo en el Titanic? -!!!NO LE DEJES EL TIMON A ELLA ¡¡¡",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: https://t.co/U1z05BiWHN problema de la inmigración africana. No dejen de verlo, menudo asco, aunque luego cobren justos por pecadores.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿Cuántas veces se ríe una mujer con un chiste? Tres veces: cuando se lo cuentan, cuando se lo explican y cuando lo entiende.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @RebecaS72720624 @TowandaRebels En serio lo de ser puta te parece Bien ? Gran Trabajo del regimen Franco-Hitler ...",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: dicen que los animales son los más fieles, pero si tú eres una perra, qué pasó?!!!",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pasan las horas y @ahorapodemos aún no ha convocado ninguna manifa en apoyo a esta menor.   Ninguna femiNAZI se solidariza con ella. Parece que si los violadores son inmigrantes, es menos delito que si lo hace un Español  https://t.co/GTE5kBufJ7",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Vendieron una servicentro shell y echaron a todos los chilenos porque el nuevo dueño solo contrata inmigrantes. Tenemos mas del 7 % de desempleo y solo quieren inmigrantes. Apoyas a los inmigrantes hasta que te quitan el empleo, la polola, la casa o la vida. Defiende a tu gente.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Analicemos esto: ¿Si te pones unos shorts así, en la calle, ¿qué esperas que te digan? ¿Acoso? ¿O Provocación... https://t.co/vRDyNzMdCG",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @xxxAirol @HealP_ @xxxeyeless Cállate puta perra después quieres que nosea mamón contigo puta perra deja de creerte gringa si naciste en la CDMX deseguro",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @YolandaRuizRCN @elespectador Se puede llamar acoso cuando algunas mujeres usan minifaldas, escotes, descaderados, transparencias etc, para provocarnos ?",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Como cuando juegas billar con un arabe, musulman  , y falla un tiro y normal se enfada, es como “todos abajo puede traer una bomba “ y mejor lo dejas ganar jajaja 😭🤷‍♀️",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿Qué tiene una mujer de 40 entre las tetas que no tiene una de 20? El ombligo.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: La infaltable oxigenada aspiracional. Una pobre y patética copia sudaka d TODO lo ke hacen los gringos. ¿Qué irá a hacer esta farándula-edil cuando los gringos se les ocurra comer caca? https://t.co/XoPGn66cfv",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: - Mujer, has progresado, solo has estado 2 horas en el telefono, por cierto quien era? -Nada, uno que se había equivocado",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: l #InformateEnHolaChile LOS RESEPONSABLES DEL INGRESO AL PAIS DE TANTOS INMIGRANTES DEBEN HACERSE CARGO DEL LOS PROBLEMAS DE SALUD DE ELLOS PORQUE ACTUALMENTE HAN VENIDO A AUMENTAR EL GRAVE PROBLEMA DE ATENCION MEDICA DE  CHILENOS ,OCUPANDO LAS POCAS HORAS DE ATENCION Y RECURSOS",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Ojalá haber grabado a todas las señoras que me han mirado mal en el bus y me han hecho pasar momentos incómodos. Sobre todo a esa señora que todo el camino vino diciendo en voz alta: \"Las sudacas consiguen lo que quieren en España a cambio de sexo\", claramente refiriéndose a mi. https://t.co/dsWOStfuB3",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: -¿Por que una mujer se alegra al acabar en 6 meses un puzle de 4 piezas? -Porque en la caja ponia de 2 a 3 años.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @daleonardi Vos callate zorra!!!! Jajaja",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Estos putos negratas noos van a robar toda la pasta Iñaqui, menos mal que yo la tengo en Panamá. https://t.co/I3qGJse5HH",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: NO SE PORQUE NO EXISTE UN CONTROL FRONTERIZO CON COLOMBIA RADICAL TRANSEÚNTES Y AUTOS TRANSPORTE DE TODO TIPO ADEMAS TODO COLOMBIANO INDOCUMENTADO DEPORTADO  BASTA CARAJO",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: - ¿Cuál es tu problema? - Mi novia es tremenda perra !!! https://t.co/2urGCRqisC",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Nadie se queja de los inmigrantes currantes, sino de los que vienen a vivir de la sopa boba, y esos, casi todos, llegan saltando la valla.   #PdV06A",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Los últimos episodios de violencia ejercida por subsaharianos en Ceuta, Barcelona y Salou nos demuestran que no son buena gente y que no aportan nada positivo a nuestra sociedad. Stop pateras, no a la invasión",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Cállate el hocico maldita zorra, deja a la mamá de Manuel, la señora de la casa",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Ya pinché puta cállate!",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Una CIS racista y transfoba nos va a explicar lo que es la transfobia... Ella que no es racista hablando de \"simios negratas\" que es \"ordenada\".  Claro que si!! https://t.co/8wF6BDhhNl 10 de la mañana y ya aguantando a TERFS!!!! https://t.co/mYSe2hVu3t",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @mraubreygrey @sweetskipp asi me gusta amor bien rica enseñando las tetas ricas que tienes perra rica",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: momento del día: vero y yo cogidos de la mano mientras me dice ''es que tú eres muy zorra''",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Después de ver las noticias de Malasia 🇲🇾, con razón tenemos tanto inmigrante en el país.  Todo es mucho más fácil acá, incluso delinquir! 😡",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Ósea se merecía lo que le pasó por puta, descuidada, mochilera y ofrecida verdad, querido cisticerco? https://t.co/ywl2G76Fxi",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @perraysex Tu eres la puta más puta con cualquier tanga....te uso el culo como depósito de semen",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @PeyejitoStyle @Zeildoux y tu eres un hijo de la gran puta y tu novia una guarra jajaja",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: CALLATE MALDITA ZORRA. ESTOY MUY NERVIOSO. https://t.co/nQClCXBTTK",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Palestino indocumentado",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Andrefcarmona @ValeeJurado Tu eres una perra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: “Nos vamos a convertir como Venezuela” decían, ahora hasta en los semáforos se habla chamo...Quiero ver al señor Duque y a los ministerios y cancillería que van hacer con tanto inmigrante chamozolano",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿Porque se dice que la cerveza tiene hormonas femeninas? Porque cuando la bebes conduces mal, dices tonterias y nadie te hace caso.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @antonellagf21 @camii_vena CALLATEEEE VOS PERRA ENVIDIOSA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Menudo chiste. Sin papeles, sin dirección conocida... Puede estar en cualquier parte ya. Y aunque lo pillen dará igual, lo defenderá open arms y todas las instituciones https://t.co/kKgIAY6sBK",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ARABIA SAUDITA, EMIRATOS ARABES, KUWAIT Y DEMÁS ADINERADOS CON LOS MASONES JUDAS Y DEMÁS DEL MUNDO HEREJE, CAVANDO SU PROPIA TUMBA SUBSIDIANDO HEREJES ANTICRISTIANOS, LA ORDENDEBE SER: CONVIERTASE A CRISTO, PACIFIQUESE Y ESPERE EN SU PAIS LA AYUDAS,... https://t.co/eZ9xvP812c",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: La fundación Francisco Franco propone eliminar las concertinas de la valla de Ceuta, y untar con tocino de cerdo la frontera para evitar que los moros nos coman.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Q pasa en🇪🇸,Q tenemos sindicatos de manteros ,como se puede estar sindicado sin tener papeles ni pasaportes ni nada Q acrediten de donde son y quién son https://t.co/gzsAZUd8xA",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: #DeRegaloTeMereces que te trague la tierra por zorra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Crece a 1.402 la entrada de inmigrantes a Ceuta, la mitad de ellos al asalto, en lo que va de 2018 https://t.co/BmesKkIS6b",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Ahora todas con un discurso feminista, pero cuando veis a una tía con escote o liándose con quien le da la gana, la llamáis guarra",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @sexyany99 Te daria $1000 x puta eso te mereces amor a mí me encantan las putas",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Saltan la valla al grito de ‘racistas’. (video) https://t.co/yTZ2ajQb4M https://t.co/S6UrsjjuGY",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @sofiammansilla Yo amo que te calles zorra 💗",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Cuando valen dice que esa chica es mas puta jajajaja almenos nos llevamos bien odiando a la misma persona",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Me quieren seguir en ig un montón de árabes/turcos/israelíes,creo que tengo cara de terrorista y no me di cuenta",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @sofialorennzo Ya, ni los hombres somos todos malos, ni las mujeres son todas una putas, simplemente hay muchas putas y muchos hijos de puta pero no todos somos así, creo que concordamos en eso jaja",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Son \"cacahuates\" dichos sobre inmigrantes: @realDonaldTrump dijo que sus comentarios en campaña son nada comparados con la realidad https://t.co/MdYZLsX3SY",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: JERUSALEM LE PERTENECE A LOS HEBREOS Y NO A LOS LLAMADOS PALESTINOS.  Los Palestinos nunca existieron en la historia, los llamados palestinos, son Arabes Musulmanes modernos.. ellos andan diciendo que son Cananeos... https://t.co/wuFleoLGWR",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Hdsptm güeras pelones sin cejas https://t.co/K8otT8zeuI",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: #YoAborte Hipócritas quieren ser europeos. Para las pelotudeces. Cuando les decís que en Europa la mayoría de los países tienen aborto legal, vuelven a ser provincianos aterrados por los curitas del pueblo. Sudacas iletrados son...",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: me acuerdo cuando le dije en anon callate perra hijueputa JAJAJAJAJAJ",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: SOS tremenda puta no lo mereces un hombre bueno. puta barata como todas tus amigas gatos de cuarta @yas__mendeguia @_ymartu @labandadeyas1 https://t.co/SscswKRgAh",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿Por que las mujers fingen cuando hacen el amor? Por que se creen q nos importa.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @alba_hm_ Ven aqui y comemela https://t.co/n1bGXxV0mu",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Español orgulloso llamando puto sudaca al PaPa ... pos na! https://t.co/YH9ycavHpR",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Santi_ABASCAL esto es una invasión africana, Salvamento Marítimo como cooperador necesario y oneges ni te cuento, de que viven??. Nadie denuncia que van a por inmigrantes a aguas marroquíes. Vaya futuro tiene España",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: que estres con los arabes la puta madre",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @TNFamosos Uy pero que cochino el que acoso a la fea está. No se le cree nada a la imbécil está maju creo se llama. Un asco y mentirosa la mina",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Son moromierdas, o musulmonos, entonces no pasa nada, ni los molestéis y de fotos nada, y de protestas por las guarras Femimarxistas, ni están ni se las espera. https://t.co/mXwR8Ii8gn",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Los sin papeles te roban el trabajo. https://t.co/OCAXJm4UH2",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @viviana_bonilla @veronicaariasf Como tú eres otra VAGA perra desgraciada ladrona",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Las migraciones no deben coordinarse, deben RECHAZARSE. Europa no necesita inmigración, necesita que todos los inmigrantes, sus hijos y nietos nacidos aquí, se LARGUEN. No son bienvenidos.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Puta es puta y se trata como puta mujer es mujer y se trata como mujer😴💪",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @LuceroAndraade Nany tú eres bien perra básica",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: No es a huevo venir con tus tops y enseñando en el gym pinche puta, vine a entrenar no a saber de qué manera te la puedo meter.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Otra verguenza que tenemos que soportar los españoles de estos negratas manteros. https://t.co/mYSCN4tLyD",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: ESAS COSAS Y OTRAS PUEDEN PASAR POR MANTENER A LA INMIGRACION ILEGAL EN ESPAÑA Y NO EXPULSARLOS ¿NO? - La agresión de los manteros a un turista pone a Colau en un aprieto https://t.co/C7mZWXAl9P vía @Elperiodico",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Es racista para los africanos para los sudacas no... https://t.co/Nz5EBx8mK6",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: No es machismo pero yo creo que las mujeres son inferiores que los hombres. Lo que hay que leer.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @detailiant no mereces entrar a mi choza perra",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pero vamos a ver PUTA VECINA DE MIERDA QUE TE CALLES ZORRA CANTAS CÓMO LA MIERDA Y YA ES MUY TARDE PARA ANDAR PEGANDO BERRIDOS",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @erices16_ Cállate vos wacha trola deja de confundir las hormonas puta",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: -¿Que le falta a una Mujer para ser perfecta? -todo",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Se quejan del 'acoso' y hacen este tipo de publicidad.... Y ahí van tu todas a 'provocar atracción masculina' https://t.co/btzgELFrn1",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @DrodriguezVen @mauriciomacri Callate perra mona que aquí uds no respetan nada ni siquiera el hambre qu pasa el pueblo sucia malparia",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: He sentido envidia, con que justo, se la \"dado\" al moromierda. https://t.co/sYr1mmcrvj",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Acostumbremonos a esto, será muy normal, aunque yo pido su no nos acostumbremonos y actuemos. Los irregulares fuera del país, no por racismo sino por justicia. Su nombre lo dice irregulares o sin papeles. No pueden estar. #LaSilenciosaCAT  #ESP🇪🇸 https://t.co/HKniXG9Xjk",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: osea si quieres enseñar el culo lo haces y eso no te convierte en un prostituta o en una puta vaya",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Que bueno que no fui güerita, si prieta soy mamona, no quiero ni imaginarme güera jajjajaa",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: En resumen, que si tu novia te llama malparido imbécil o tu novio te llama zorra trimaldita, da igual. Si te mete bien es worth.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @RodrigoReveco Cállate zorra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @CanalusHeresy @Fourty35 @IrantzuVarela A, que la zorra está va de matona por la vida? Jajajaja. Pero si de un soplido la desgracias al adefesio ese!😂",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Menos mal que el ínclito Marlasca nos ha abierto los ojos !! @marianorajoy TIENE LA CULPA DE LA INVASIÓN DE NEGRATAS !! Éstos Psoepodemitas no tienen arreglo !!! @sanchezcastejon DIMISIÓN YA !!!!!!!!!!!!!",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pedí un uber y el conductor es una persona con rasgos de ascendencia árabe y no es pedo que el coche apesta cabron a puesto de hot dog callejero.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @hezmick @pegaso6038 Zorra tu eres el dolor y se Le va a poner remedio no te preocupes",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @FRivero2 @diegoalvarezmgl ¡Sí se puede! Todos los imbéciles que estarán jaleando a Reverte por dejar a esa zorra lesbiana en su sitio. Al menos el asco que da Reverte es parte de un personaje que le da de comer, los otros lo hacen gratis.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¡Ay esos inmigrantes vienen aquí a vivir de lo público, cobrando y robando, además con títulos universitarios falsos!",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Tema inmigración de Venezuela como estamos y que bebemos hacer ayer mire un programa con abogados pidiendo abrir un estudio con todos ellos pera trabajar en Argentina no es como mucho que antecedentes tienen que hacemos con los nuestros es un tema a mirar antes que nos estalle",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿Por qué una mujer no puede ser guapa e inteligente? Porque sería un hombre.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: No os voy a enseñar lo guapo que está @Dosek14 hoy porque soy una puta egoísta de mierda.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Habeis visto el video de la señora del Metro de Madrid que no deja sentar a una niña extranjera??? pues el vídeo de los negratas pegando a un turista americano por defender a una mujer con una silla de un bebé en Barcelona no lo vais a ver!! #👏👏👏👏👏",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Va una mujer tonta, valga la redundancia.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Que patético, vergonzosa la historia de chile, un país del tercer mundo sometido a USA que puso a Somoza, Trujillo y muchos otros patéticos dictadores sudacas https://t.co/HOi439SY8j",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @arisool__ JAJAJA QUE HIJA DE PUTA, canto hermoso callate",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @SErikasex Ya deseo castigarte de una buena vez perra de mierda, mereces que te rellene una y otra vez de muchos chorros de semen hasta dejarte preñada!",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Jajajajaja pero esta señora que le pasa. No son refugiados son inmigrantes ilegales. Si piensas tratar a todos los pobres por refugiados creo que deberias observar un poco a tu alrededor y ver que aqui hay mucha gente pobre que no les conceden ese \"estatuto\" del que hablas https://t.co/N7AMOGNmnq",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Típica respuesta de gorda...: http://t.co/E4VgERSomC",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @infobae CALLATE PUTA CHORRA ASESINA TRAIDORA A LA ´PATRIA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: QUÉ QUERÉS CON ESTOS NEGROS FRANCHUTES ? 😂😂🤣🤣 https://t.co/uFCA3YSENd",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: La izquierdona ha encontrado su mina de oro. Votará a su favor todo inmigrante que esté aquí unas cuantas semanas y votará a quienes les han traído aquí, les mantienen aquí, les adoctrinan  y les dan beneficios a costa de tu  dinero y el mío. Pedro El Grande es un genio. https://t.co/r6BNau7nn0",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿para que se inventó el alcohol? para que las feas, gordas y canis perdieran la virginidad.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: '¿Quieres buscar fama pa tirarte la kiada, pa follarte a la más guarra y ganarte 4 perras? Yo te la regalo primo, solo trae desgracia. Yo ya escuchaba al Edu y el decía: 'fuck the fama'''",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: es que con ese escote pareces una guarra', 'esa falda tan corta...', 'las medias de rejilla... (puta)' en fin.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @EvelynAlcaldesa Alcaldesa los extranjeros que estan vendiendo en las calles los fiscalizan si estan legal en el País por que no los deportan si estan indocumentados muy bien su trabajo las calles de Providencia parecian interminables ferias",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Si escucha tus gemidos obcenos seguro que si así que mejor cállate puta~ https://t.co/GCf6698vzb",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Un indocumentado...habla y habla y no para y acaba hablando su ignorancia.Empezamos bien. https://t.co/SMRsqjtEBT",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Qué rico vivir en un país donde las cosas no son así, y nos dicen sudacas... https://t.co/pu7XA9o6pm",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: A mi me insultan y no pasa na, sale adan con el cantico y vaya tela? MI NOVIA ES SEVILLISTA Y ES UNA PUTA MAS!!! PUTA ZEBIYAAA PUTA ZEBIYAAA!!!!",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: El Madrid dando pena con el moromierda argelino delincuente de Florentino de capitán, ya puede estar feliz el dictador y sus oficialistas... Mucha mierda por comer con ese pedazo de mierda con el 9 a la espalda...",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @carmeladp07 POR FAVOR NO PROMETAS ESO ☹️😢 tú eres perra diva",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Tu peloteo es ridiculo, para ti un latinoamericano siempre será un sudaca o panchito, nunca lo trataras h consideraras de tu nivel https://t.co/fw3JVB9Do1",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Alguna de sus co secuencias, no siendo las peores que las hay y graves. \"sin papeles\" Una joven sufre seis fracturas tras ser arrollada por un grupo de manteros en la Gran Vía https://t.co/ixBlY7j37D vía @elmundoes",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Atendían terroristas con todo. Al tiempo asesinaban niños palestinos menores d 15 años por docenas, a cientos d metros, con francotiradores, sobre seguro. ESE ES EL HUMANISMO DEL SIONISMO. Ahora quitan ciudadanía israelí a quien no sea Judio; Drusos-Árabes-palestinos - su idioma. https://t.co/6IEbmJjV6E",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Ay Dios cuando se entere Casado de que la ola de calor viene dada por la entrada masiva, sin papeles, de aire subsahariano",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Y en toda Europa se estan matando y violando a millones y millones de blancos, pero eso ni lo mencionas. Tampoco mencionas que esos negros y arabes causan problemas. https://t.co/jmxZmnY6Qw",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: El Estado del Bienestar para quién? Para inmigrantes (mantero ,violadores y demás chusma que estáis trayendo) Pagas y SS que tenemos que pagar los demás ?  Para cuándo el Bienestar de los Españoles, Seguridad en el trabajo de Policia y Guardia Civil, trabajo y ayuda xa parados..? https://t.co/yU4ccZMPGA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Haber de la güera de rancho no me sorprende su actitud de altanera, envidiosa y creída. Pero de la monja?✊ Mustias #TeamAlan",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿Que harian los hombres sin las mujeres? Pues domesticar otro animal y esta vez no enseñarle a hablar.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @patty_diablito @CrisAsmr @patty_dragona @Makiman131 callate tu . patty es una puta y siemrpe lo sera",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Tabatajalilreal @Azteca @AztecaTrece Putabata, me paras la verga bien rico, te quiero culiar y venirme en tu cara de zorra😍",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @FeerChavela_ Obvio tu eres mi mejor amiga por siempre y para siempre, zorra",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Criminalizar a los manteros es redundante; los manteros son delincuentes y forman parte de una cadena de crimen organizado detrás de la cual hay inmigrantes ilegales, mafias, empresarios nacionales, y, cómo no, políticos.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @TRANQUlLlTA Oye callate que si te molesta pues no mires el chat y deja ya de llamar la atención guarra, mi Instagram es trussypussy25 chavales",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: En que se parecen las mujeres a los semaforos. -que despues de las 12 nadie las respeta.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Con la Sanidad abierta a todo el mundo y cobrando del paro con pocos requisitos, yo si fuera inmigrante me venia de cabeza, menudo chollo.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Yo nunca le he dicho puta a una mujer pero socia tú eres senda petardo 😂😂 estas navidades no voy a comprar pirotecnias ya contigo vasta 😂😂😂",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @riveraingrith @sofiaamtz5 JAJAJAJAJAJAJAJA ya sé, pero tú eres una perra, yo soy bien buena y Sofía se aprovecha de mi nobleza",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Para que? Si tu eres una perra, tienes 182837332 qlitos.l. i miss you😘 https://t.co/fOomk28Phf",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: me follo a los negratas",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: hdp solo sudacas tenian que ser https://t.co/gipWnw1ahR",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Pinches ridículas doble moral, primero dicen que odian la infidelidad pero andan defendiendo a otro que es igual de puta a ellos. NO MAMEN",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Lo primero que tendría que hacer Pdr Snchz cuando vuelva de vacaciones  es una sesión de fotos practicando footing en la Moncloa rodeado de  negros. Perdón, subsaharianos. Con eso lo arreglábamos todo. Hasta podríamos usar a Obama de extra",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Vendida, @IndiraHuilca, tienes cara para demostrar tu hipocresía, mejor cállate, perra. https://t.co/mLwCXla1nn",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @blacguido27 Cállate ladrona sigue vendiendo tu zorra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Y pase lo que pase no votéis a una mujer, que no podrá ocuparse de su cargo por tener que cuidar la casa y lavar la ropa del hombre #deber",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: #RacismoEs  que los tres García anduvieran detrás de la güera y que ella se quedara con el más güero de los 3 https://t.co/1mzNmsVfYB",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @LuciaV1llar Cállate zorra si vos ya tenes 20",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @MarHuidobro tú eres la zorra madre de un asesino con gen izquierdoso y separatista!!!",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @ferdiazgil @ilseCeroUno01 @Compotita Exacto. Guarra y egoísta, que el que venga detrás se busque la vida.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Hola, tarta. Sé bien lo que quieres. Te ví en aquella película. Zorra, cerda, puta. No te mereces que me acueste contigo —Peter Griffin",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Por que las mujeres tienen cuatro labios: los dos de arriba para decir tonterias y los dos de abajo, para arreglarlas",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Andrej Babiš, Presidente del Gbno Checo rechaza de plano la inmigracion subsahariana.  No los queremos en Chequia, nunca tendrian un empleo y para mantenerlos aqui, q se les ayude en sus paises de origen, sus costumbres no son compatibles con las nuestras  https://t.co/VDlqDOeNFN",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Como siempre, nuestras autoridades a última hora se dan cuenta d todos los problemas q generan los inmigrantes venezolanos sin haber cumplido los requisitos para este fin. Una vez más, se demuestra q son improvisadores y no previsores; en conclusión terminan siendo informal todo.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @EdiiXI @lidiahdlgo Cállate tu !! Perra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Absurda Europa y Bruselas. El populismo es lo que tienen ellos declarando un igualitarismo y socialismo fracasado , un estado de bienestar para inmigrantes ilegales y para quienes no trabajan y de malestar para el que produce y le quitan todo con impuestos https://t.co/B87xPLow29",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @medicengaribay Cállate zorra que él alcohólico aquí eres tú.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @CaccoL Tú eres más puta jijijiji",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @psoe @sanchezcastejon @ahorapodemos @AdaColau Parece que va siendo hora de hacer algo contra estos indocumentados ¿No? La pasividad y el inmovilismo no es una opción. Actúen o dimitan!!! https://t.co/GuJ3uTrRRr",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Callate zorra chupa pija",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: #parejainfelizSDP lq mujer es lesbiana puta",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: puta q odio la voz chillona d la perra d Spotify CÁLLATE POR FVAOR NADIE VA A PAGAR ESO",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Los huracanes con nombre de mujer son más letales' https://t.co/Wql6F2Em2U",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @AgathaBribli Te lo mereces, por usar uñas de GUARRA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: La mina también bastante puta. Onda, la que esta de novia es ella no el 🙆🙆 https://t.co/cBYGWb6nty",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Algo se pudre en el Perú,  Es el caos organizado ,surrealista ,subsahariano nuestra realidad. https://t.co/3hMs5Jyx7V",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Es muy lógico, hay que pagar los inmigrantes ilegales que entran en España sin parar, y ............no hay dinero para l@s español@s, mientras SÍ dan papeles a todos!! VERGÜENZA!!!!!! https://t.co/SRYq8R1QME",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @realDonaldTrump recuerde señor presidente el xq ni arabes xq como payasos ponen su cara en mi familua y chinos xq ponen a un loco y un cinico assesino como mi mirada recuerde senor presidente el xq ni arabes ni chinos",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Campaña para que ley Rapa Nui se extienda a todo el país y así frenar la inmigración",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Cállate madre perra culiá maraca conchetumare hija de la Daniela Chávez que tiene las panderetas de la zorra colgando. Saludos cordiales. Beso en el poto que te rompemos año a año en La Ruca 😘 https://t.co/j1HWOWSTOZ",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @manuel70m @elhijod50580766 Qué pasó Manolo! Ya Dile al sudaca ese que mande unos kilos",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Y tu eres perra ? Ladrame hau hau hau ... QUE PERRRRRRA MI AMIGAAAAAAAAAA",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @ClaudiaRocaL Pero si tú eres la primera en poner peros cuando te digo para salir, PERRA",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Cada quién se ofende de lo que quiere y por eso es absurdo sancionar el lenguaje ofensivo. A mí la neta me viene valiendo dos héctareas de...si me dicen “pinche güerito” pero que justifiquen que eso está bien porque otros güeros en otra época y lugar fueron unos OGTs pffffft! https://t.co/ab1W0rV8Uz",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Que horrible verte así Sofi, como te voy a extrañar mi perra loca! Espero que estes en un lugar mejor, y tengas todo lo que mereces!",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: La inmigracion de personas de cultura similar o dispuestos a adaptarse y respetar nuestra cultura es beneficiosa. Cientos de miles de indocumentados violentos, ignorantes y fanatizados por la religión que vienen a vivir de ayudas es una invasión.  #DeNada https://t.co/l9wUEiQ4mh",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Teñida del orto me dice el cara de artesanía prehispánica. Seguís siendo sudaca amigo, por algo no podes irte a tu alemania natal. https://t.co/zJQwgOL4Xp",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @pedrons97 Jajajaj si we tu eres bien perra chismosa",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @MilagrosMBarros @AgusQ_99 Jajajajajajaja callate que ni labial tenias zorra , yo si😇",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Tipico : si una chica no le cae otra chica es por que para la otra es una PUTA 😂 pero solo por que no le cae bien",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @jarid_pereira @maria_lejandra6 jarid callate brothal ella era puta pero aurelio es tan santo verdad. ella sabia con quien acostarse pa tener las cone",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Puta de su madre..... Que esta mujer es RECONTRA imbécil y tenemos que pagarle con nuestros impuestos... Le hacen saber que su JEFA SAMURAI recibió dinero SUCIO y ella se convence mas, que tienen que LUCHAR CONTRA LA KORRUPCION ... SACATE LA MIERDA DE LA CABEZA... MUJER https://t.co/ryXAQ6YsRq",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Permitir que el país se les llene de subsaharianos por obtener a cambio un título mundial de fútbol es un precio muy alto que están pagando los franceses por semejante baratija.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Sánchez da Sanidad gratis a los sin papeles... pero no a los inmigrantes legales  https://t.co/WRLrAPqf3z   @updayESP como te lo comes eso? Si eres ilegal toda la ayuda es poca pero si estas en desempleado entonces ....",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Suriel hace años en Venezuela vivimos eso mismo, la entrada incontrolable de indocumentados de los paises vecinos llevo todo tipo de personas al país. Que los metan presos o que los deporten. Y extremar medidas para que no entre este tipo de gente @suriel https://t.co/vaSL1LRd0Y",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @weni_habbo @ESHabbo @JorgeHelper @LinuXx_Habbo @DeRociodemiel @BryanBieber17HB @iMonyHabbo Cállate puta",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Que buena vaina carajo con la cochina cultura árabe no conforme con la invasion que tenemos xq ya los venezolanos parecemos extranjeros en nuestro propio país, ahora canciones árabes en emisoras radiales no me jodan con esa cultura mal viviente",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @CRDecoracion si a mi me dicen mardita hubiese dicho 'yo si mi amor' como una real perra pero tu eres nula así que te prestare mi tarjeta para que te compres una personalidad",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Y tu eres Perra, ládrame. Ay, qué perra mi amiga. 🐶🐶",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @JuliSale1 Callate si igual no las decís fuera mitad de año o estas fechas, zorra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @William43591799 Tu eres una perra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @xTZeuS Zeus callate puta gorda q te huele la boca",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @luz_darks wall-e me conmovio , tu eres una perra gelida.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @smercedesfranco @BSCmask007 @flynn_and_clu @abdalabucaram @daloes10 @LassoGuillermo Perra mentirosa y mereces mas calificativos ante tamaña mentira, gracias a gente como tu y al error histórico a la grabación del complot es que Abdala Bucaram ha puesto u",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Eliminar el cáncer del top manta subsahariano en #Barcelona con 3 medidas de oro: 1)detener a \"sindicatos\" de delincuentes que encima van por ahí como interlocutores, 2)repatriaciones masivas a África, 3)cierre y repatriaciones masivas de chinos proveedores.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Si eres de los que piensas que una mujer es una mala puta por pensar diferente a ti Vota a ERC PdCAT o CUP",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: O Panamá es muy chico, o tu eres muy perra.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @SuperFedePirata @checharlu #TodasPutas y una vuelve con el poporopo como una flo",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿A qué están esperando para regularizar a la mafia de manteros, ilegales y con muy mala leche? Se creen que tienen todos los derechos del mundo. Hasta dónde sé, en ningún país desarrollado, te permiten estar viviendo ilegales y sin papeles. Y ni pensar lo de la sanidad.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: El gobierno debe crear un control estricto de inmigración en las zonas fronterizas con Colombia por q después del 20-8querrán venir en masa",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Relatofeminista El es un cabron y la otra una zorra dependiendo de si sabía o no la situación del tio",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: perra estúpida diciendo esas tonterías en mi tl no señor",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @TaquitoDeCecina Cállate perra trolls forevaa",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: El efecto llamada existe. Es una llamada de verdad. Telefónica. Un inmigrante indocumentado que comparte un cuartucho con otros diez en Madrid y corre ante la policía para poner a salvo las imitaciones baratas de bolsos de moda,… https://t.co/KdauywrZ9i https://t.co/Q0frk5WYZn\t1\t0\t0\n21708\t@AlvaroUribeVel Pa’ pegarte en la cara MARICA.\t0\t0\t0\n21709\t@nestorpitrola pedazo de hijo de remil puta mira lo que provocaron este ´policía lo están operando esta en estado reservado mal parido la violencia que generaron https://t.co/QpJmNeP5Ku\t0\t0\t0\n21710\t@hectorbecerrilr Conchudo no tienes sangre en la cara la escoria eres tú no avanzamos por personas que no suman entre ellas estás tú!\t0\t0\t0\n21711\tNecesito salir al boliche y bailar Arabe de Ecko\t0\t0\t0\n21712\t@MissHedone La han llevado para decirle CÁLLATE LA PUTA BOCA FEMINISTA DE MIERDA\t1\t1\t1\n21713\tCardi B se ve que como novia es súper perra. Soy su fan\t1\t1\t0\n21714\t@chrisgatico CALLATE YEGUA, MALDITA PERRA AHRE\t1\t1\t1\n21715\t@floorperaalta @LeooAntonelli Cállate vos Puta de mierda\t1\t1\t1\n21716\tLos amigos de verdad son los que se pueden reír de ti y al mismo tiempo no te faltan el respeto cállate la puta boca y a estar agradecido de que somos lo mejor especialmente yo https://t.co/BGqkI2pF2X\t0\t0\t0\n21717\t@HdYurii Cállate y agregame de amigo zorra x2\t1\t1\t1\n21718\tQue dice la sudaca ésta que en América había una \"\"civilización\"\" antes de que llegase Colón... 😂😂😂😂😂😂😂😂 https://t.co/3NBoYeLfzN\"",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Ojooooo que Adán la lía, en el autobús mientras celebraban la victoria, decía esto: 'Mi novia es sevillista, y es una puta más'",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: De hoy en adelante si una mujer te envía una foto desnuda hay que denunciarla por acoso sexual y provocación Feminazis al ataque en 3-2-1",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: EnTwitter: Muérete maldita puta me destruiste no mereces la vida púdrete en el peor de los infiernos Ex: y eso? Me: es una canción jaja",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Miriam se merecía una canción decente para bordarlo y es que la perra lo ha bordado y se ha quedado tan tranqui! #OTGala8",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: El puto sudaca de Nahuel Guzmán insultando a Pedro Caixinha al momento que el portugués esta dando su conferencia post partido.  Veremos si la @LIGABancomerMX tiene el valor de suspenderlo o dejará que siempre haga lo que quiera.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: -¿porque los hombres se casan con las mujeres? -porque las cabras no saben fregar los platos.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: A la señora que está hablando a pulmón con su amiga a 50cm de ella, cállate de una puta vez.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: ¿En què se diferencia un hombre de una mujer? En que el hombre es masculino, la mujer masculona.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Antweetmoral tú cállate hija de perra https://t.co/rHAD9hosVI",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Los manteros subsaharianos desbocados...Las mafias se lian en Torrevieja a sillazos contra la policia. #ELECCIONESGENERALESYA https://t.co/nlU1B4gjsM",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @david__maranon Y tú eres la Ana Guarra, robachicos",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @_CandelaNievas Manga de pitos cortos hijos de puta les voy en enseñar lo q es respeto puto de la patada en sus partes intimas que les voy a dar y mujeres ustedes tampoco se salvan conchas retobadas",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @pprecuero @EdGrimaldo Ni tas trabajando perra callate.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @Namurii @medicaster_xz @Yorha2d @KeloKlau_ Se merecía de puta y no quiere que le metan la verga, jajaja no mamen",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Sea insulto o no, los \"malditos sudacas\" son los que tienen en pie a las ligas del fútbol español y europeo https://t.co/EwHDpR0gZV",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @BeeluArzola De que amores hablas hija de mil puta? No te llenes la boca con Dios yegua de mierda no mereces ser madre TURRA MAL PARIDA.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: no me importa, cállate zorra quita novias",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @eloyalvidrez10 Tu eres mi lady zorra barata",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @psychodelay Dice Andres que te calles maldita perra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: En un descuido y los güeros estén detrás de todo esto! https://t.co/p8IiBPxtHd",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Como son españoles nada... sin fueran refugiados...GLORIA #migrates #refugiados #EspañaLoPrimero https://t.co/JKc8IYs32c",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: @LunaUrlure @guapilla_vanesa GUARRA mejor busca alguien que te ponga mirando para Cuenca, que es lo que te hace falta, Guarrilla",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @quieromamarpene @calenton_madrid @Pito_maricon_ Vas a sentir como sé mueve mí polla en tú culo de putita para qué veas que tú amo no sé olvida nunca de darte tú ración de leche en ese maravilloso culo peludo de putita",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Si la suerte me abandona y ves que estoy un poco triste, es que tú eres una zorra y un buitre no come alpiste.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Vaya perla de sabiduría de esta gentuza: “No es tan malo que los refugiados musulmanes violen a las mujeres suecas, ya que es algo cultural en ellos” - Barbro Sörman (diputada socialista feminista. Fuente: https://t.co/RKQEJTNDRB",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Qué hace una mujer cuando llega y.. Bah, a quién coño le importa? Si es una mujer...",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: -Madrid, infarto de mantero. Todo la izmierda en la calle, los subsaharianos tirando sillas y las redes ardiendo. -Barcelona, turista casi asesinado por mantero. Ni es TT. Se nos ha ido de las manos.",
+            "output": [
+                "Non-aggresive"
+            ]
+        },
+        {
+            "input": "Post: Mi futuro es tan negro que está saltando la valla de Melilla.",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Estos son los niveles de maldad de un malandro venezolano. Por esa razón apoyo las protestas en contra de la inmigración masiva de venezolanos. Se requiere un control. https://t.co/8X4M7o7y65",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: @FacundoV_ @Imsitx cállate virgen chuggeaste como perra",
+            "output": [
+                "Aggresive"
+            ]
+        },
+        {
+            "input": "Post: Obviamente, @A3Noticias no iba a desvelar la nacionalidad de los 3 moromierdas que han abusado en Tudela de una niña.",
+            "output": [
+                "Non-aggresive"
+            ]
+        }
+    ],
+    "Input_language": [
+        "Spanish"
+    ],
+    "Output_language": [
+        "English"
+    ],
+    "Instruction_language": [
+        "English"
+    ],
+    "Domains": [
+        "Social Media -> Twitter"
+    ]
+}
